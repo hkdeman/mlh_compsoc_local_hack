@@ -21,4 +21,13 @@ Add the users in the admin page by going to:
 http://localhost:8000/admin/backend/member/
 ```
 
+Step 5: 
+
+Go to 
+
+```
+http://localhost:3000
+```
+
+and get your mind blown.
 
