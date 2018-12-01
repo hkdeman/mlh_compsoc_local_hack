@@ -58,7 +58,7 @@ export default class WebcamCapture extends React.Component {
     }
 
     videoStarted() {
-        // this.capture();
+        this.capture();
     }
   
     render() {

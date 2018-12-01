@@ -7,7 +7,9 @@ class Banner extends Component {
         <h3 style={{textAlign:"center"}}> Next Event</h3>
         <br/>
         <h4 style={{textAlign:"center"}}> March 11th, 2019</h4>
-        <img src="https://2018.hacktheburgh.com/static/img/logo-htb-print.png" style={{width:"50%", padding:"2%", display: "block", marginLeft: "auto", marginRight:"auto"}}/>
+        <a href={this.props.href}>
+          <img src="https://2018.hacktheburgh.com/static/img/logo-htb-print.png" style={{width:"50%", padding:"2%", display: "block", marginLeft: "auto", marginRight:"auto"}}/>
+        </a>
       </div>
     );
   }

@@ -6,6 +6,7 @@ import Banner from './components/Banner';
 import Links from './components/Links';
 import ImageLinks from './components/ImageLinks';
 import $ from 'jquery';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
 class App extends Component {
@@ -46,47 +47,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <WebcamCapture changeMembership={this.changeMembership} changeMemberName={this.changeMemberName}/>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#"><img width="120px" src="https://comp-soc.com/static/img/compsoc-horizontal.svg"/></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Events</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">News</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                  {this.state.setup ? !this.state.member ?
-                              <a class="nav-link" href="https://www.eusa.ed.ac.uk/activities/societies/society/compsoc/">Become a Member</a> : 
-                              <a class="nav-link" href="#">Welcome, {this.state.name}</a> : ""}
-              </li>
-          </ul>
-          </div>
-        </nav>
         <div class="col-lg-12">
           <h2 class="main-title"> Home of scotland's best and largest tech society</h2>
-          <Banner href="https://2018.hacktheburgh.com/"/>
+          <Banner />
           <h2 style={{marginTop:"4%", textAlign:"center", fontSize:"2.7em"}}>Comp Soc: Home of SIGS</h2>
           <div style={{marginLeft:"13%"}}>
-            <Links href="http://sigint.mx/" color="#F08080" link="https://comp-soc.com/static/img/sigs/sigint.png"/>
-            <Links href="http://hacktheburgh.com/" color="#45B39D" link="https://comp-soc.com/static/img/sigs/hacksig.png" />
-            <Links href="https://comp-soc.com/sigs/sigcoin" color="#2980B9" link="https://comp-soc.com/static/img/sigs/sigcoin.png"/>
-            <Links href="https://comp-soc.com/sigs/lawtech" color="#032c3B" link="https://scontent-lht6-1.xx.fbcdn.net/v/t1.15752-0/p280x280/47226932_274502723408992_5608729248463323136_n.png?_nc_cat=100&_nc_ht=scontent-lht6-1.xx&oh=3235d92c92eb95ef42c80b5ac863d38e&oe=5C688547"/>
-            <Links href="https://comp-soc.com/sigs/signet" color="#1f7a8c" link="https://scontent-lht6-1.xx.fbcdn.net/v/t1.15752-0/p280x280/47388997_269894647006946_6342566518844293120_n.png?_nc_cat=106&_nc_ht=scontent-lht6-1.xx&oh=7e9f7728d7ff44d2db6faf23d62ba083&oe=5C6B3AE0"/>
-            <Links href="https://comp-soc.com/sigs/sigweb" color="#9ee4be" link="https://scontent-lht6-1.xx.fbcdn.net/v/t1.15752-0/p280x280/47172437_512864912552576_7712101065482567680_n.png?_nc_cat=111&_nc_ht=scontent-lht6-1.xx&oh=82929c75bec7d80565a2630ce3497bcd&oe=5CAA0FF5"/>
+            <Links color="#F08080" link="https://comp-soc.com/static/img/sigs/sigint.png"/>
+            <Links color="#45B39D" link="https://comp-soc.com/static/img/sigs/hacksig.png" />
+            <Links color="#2980B9" link="https://comp-soc.com/static/img/sigs/sigcoin.png"/>
+            <Links color="#032c3B" link="https://scontent-lht6-1.xx.fbcdn.net/v/t1.15752-0/p280x280/47226932_274502723408992_5608729248463323136_n.png?_nc_cat=100&_nc_ht=scontent-lht6-1.xx&oh=3235d92c92eb95ef42c80b5ac863d38e&oe=5C688547"/>
+            <Links color="#1f7a8c" link="https://scontent-lht6-1.xx.fbcdn.net/v/t1.15752-0/p280x280/47388997_269894647006946_6342566518844293120_n.png?_nc_cat=106&_nc_ht=scontent-lht6-1.xx&oh=7e9f7728d7ff44d2db6faf23d62ba083&oe=5C6B3AE0"/>
+            <Links color="#9ee4be" link="https://scontent-lht6-1.xx.fbcdn.net/v/t1.15752-0/p280x280/47172437_512864912552576_7712101065482567680_n.png?_nc_cat=111&_nc_ht=scontent-lht6-1.xx&oh=82929c75bec7d80565a2630ce3497bcd&oe=5CAA0FF5"/>
           </div>
         </div>
         <div class="col-lg-12">
